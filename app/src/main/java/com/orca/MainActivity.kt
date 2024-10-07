@@ -11,10 +11,23 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.orca.ui.theme.OrcaTheme
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.orca.design.theme.OrcaTheme
+import kotlin.properties.Delegates
 
 class MainActivity : ComponentActivity() {
+    companion object {
+        private const val SPLASH_DURATION = 3_000L
+    }
+
+    private var splashEndTime by Delegates.notNull<Long>()
     override fun onCreate(savedInstanceState: Bundle?) {
+        splashEndTime = System.currentTimeMillis() + SPLASH_DURATION
+        installSplashScreen().apply {
+            setKeepOnScreenCondition {
+                splashEndTime >= System.currentTimeMillis()
+            }
+        }
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {

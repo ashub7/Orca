@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Orca"
 include(":app")
- 
+include(":design")
+include(":auth")

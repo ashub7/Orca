@@ -1,13 +1,28 @@
 [versions]
 agp = "8.5.0-rc01"
-kotlin = "1.9.0"
+kotlin = "2.0.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.6"
 activityCompose = "1.9.2"
-composeBom = "2023.08.00"
+composeBom = "2024.09.03"
+coreSplashScreen = "1.0.1"
+hilt = "2.51.1"
+material = "1.12.0"
+activity = "1.9.2"
+kotlinxCollextionsImmutable = "0.3.8"
+retroFit = "2.11.0"
+okHttpLogger = "4.12.0"
+hiltNavigationCompose = "1.2.0"
+detekt = "1.23.7"
+googleFont = "1.7.3"
+coil = "2.7.0"
+appcompat = "1.7.0"
+ksp = "2.0.0-1.0.24"
+composeDestinations ="2.1.0-beta12"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,7 +40,29 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
+androidx-core-splashScreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashScreen" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+kotlinxImmutableCollections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinxCollextionsImmutable" }
+retroFit-client = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retroFit" }
+okhttp-logger = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttpLogger" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+detekt_formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+google-font = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "googleFont" }
+coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+compose-destinations = { group = "io.github.raamcosta.compose-destinations", name = "core", version.ref = "composeDestinations" }
+compose-destinations-processor = { group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "composeDestinations" }
+compose-destinations-bottomsheet = { group = "io.github.raamcosta.compose-destinations", name = "bottom-sheet", version.ref = "composeDestinations" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+android-library = { id = "com.android.library", version.ref = "agp" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
