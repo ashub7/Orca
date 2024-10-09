@@ -22,6 +22,7 @@ coil = "2.7.0"
 appcompat = "1.7.0"
 ksp = "2.0.0-1.0.24"
 composeDestinations ="2.1.0-beta12"
+roomVersion = "2.6.1"
 
 
 [libraries]
@@ -47,6 +48,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 kotlinxImmutableCollections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinxCollextionsImmutable" }
 retroFit-client = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retroFit" }
+converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retroFit" }
 okhttp-logger = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttpLogger" }
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 detekt_formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
@@ -56,6 +58,8 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 compose-destinations = { group = "io.github.raamcosta.compose-destinations", name = "core", version.ref = "composeDestinations" }
 compose-destinations-processor = { group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "composeDestinations" }
 compose-destinations-bottomsheet = { group = "io.github.raamcosta.compose-destinations", name = "bottom-sheet", version.ref = "composeDestinations" }
+androidx-room = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
+androidx-room-processor = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -66,3 +70,11 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
+room = {id = "androidx.room", version.ref = "roomVersion"}
+
+[bundles]
+retroFit = [
+    "retroFit-client",
+    "converter-gson",
+    "okhttp-logger"
+]

@@ -1,15 +1,16 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
-    namespace = "com.orca.design"
+    namespace = "com.orca.network"
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 28
+        minSdk = 30
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -34,19 +35,8 @@ android {
 }
 
 dependencies {
-    api(libs.androidx.activity.compose)
-    api(libs.androidx.material3)
-    api(libs.material)
-    api(libs.androidx.ui)
-    api(libs.androidx.ui.graphics)
-    api(libs.androidx.ui.tooling.preview)
-    api(libs.google.font)
-    api(libs.coil)
-    api(platform(libs.androidx.compose.bom))
-    debugImplementation(libs.androidx.ui.tooling)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.bundles.retroFit)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
 }
