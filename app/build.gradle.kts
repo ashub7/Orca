@@ -53,9 +53,54 @@ android {
 
 }
 
+
+
+allprojects {
+    apply(plugin = "io.gitlab.arturbosch.detekt")
+    dependencies{
+       /* detektPlugins(libs.detekt.formatting)
+        detektPlugins(libs.detekt.compose.rules)*/
+    }
+
+
+/*    allprojects { project ->
+        apply plugin: "io.gitlab.arturbosch.detekt"
+
+        dependencies {
+            detektPlugins "com.twitter.compose.rules:detekt:0.0.26"
+        }
+
+        detekt {
+            toolVersion = "1.23.3"
+            config.setFrom("$rootDir/codequality/detekt/detekt.yml")
+            buildUponDefaultConfig = false
+            allRules = false
+            baseline = file("detekt/baseline.xml")
+            basePath = projectDir
+        }
+
+        // If not set, all file paths reported will be absolute file path.
+        tasks.withType(Detekt).configureEach {
+            jvmTarget = "1.8"
+            reports {
+                xml.required = false
+                html.required = true
+                html.outputLocation = file("detekt/report.html")
+                txt.required = false
+                sarif.required = false
+                md.required = false
+            }
+            basePath = rootDir.absolutePath
+        }*/
+}
+
+
+
+
 dependencies {
     implementation(project(":core:design"))
     implementation(project(":features:auth"))
+    implementation(project(":features:home"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.core.splashScreen)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -15,15 +15,19 @@ activity = "1.9.2"
 kotlinxCollextionsImmutable = "0.3.8"
 retroFit = "2.11.0"
 okHttpLogger = "4.12.0"
-hiltNavigationCompose = "1.2.0"
 detekt = "1.23.7"
 googleFont = "1.7.3"
 coil = "2.7.0"
 appcompat = "1.7.0"
 ksp = "2.0.0-1.0.24"
-composeDestinations ="2.1.0-beta12"
 roomVersion = "2.6.1"
-
+mockWebServer ="4.12.0"
+kotlinxCoroutines = "1.9.0"
+dotsindicator= "5.0"
+dataStore ="1.1.1"
+moduleGraph = "0.10.1"
+androidxHiltNavigationCompose = "1.2.0"
+androidxNavigation = "2.8.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,6 +44,16 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-material3-navigationSuite = { group = "androidx.compose.material3", name = "material3-adaptive-navigation-suite" }
+androidx-compose-material3-adaptive = { group = "androidx.compose.material3.adaptive", name = "adaptive" }
+androidx-compose-material3-adaptive-layout = { group = "androidx.compose.material3.adaptive", name = "adaptive-layout" }
+androidx-compose-material3-adaptive-navigation = { group = "androidx.compose.material3.adaptive", name = "adaptive-navigation" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
+androidx-navigation-testing = { group = "androidx.navigation", name = "navigation-testing", version.ref = "androidxNavigation" }
+
+
+
 
 androidx-core-splashScreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashScreen" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
@@ -50,16 +64,17 @@ kotlinxImmutableCollections = { group = "org.jetbrains.kotlinx", name = "kotlinx
 retroFit-client = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retroFit" }
 converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retroFit" }
 okhttp-logger = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttpLogger" }
-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 detekt_formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 google-font = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "googleFont" }
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-compose-destinations = { group = "io.github.raamcosta.compose-destinations", name = "core", version.ref = "composeDestinations" }
-compose-destinations-processor = { group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "composeDestinations" }
-compose-destinations-bottomsheet = { group = "io.github.raamcosta.compose-destinations", name = "bottom-sheet", version.ref = "composeDestinations" }
 androidx-room = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
 androidx-room-processor = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
+okhttp3-mockwebserver ={ module =  "com.squareup.okhttp3:mockwebserver" , version.ref = "mockWebServer"}
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+pager-dotsindicator = {module = "com.tbuonomo:dotsindicator", version.ref = "dotsindicator"}
+datastore-preferences = {group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore"}
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -71,6 +86,7 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
 room = {id = "androidx.room", version.ref = "roomVersion"}
+module-graph = { id = "dev.iurysouza.modulegraph", version.ref = "moduleGraph" }
 
 [bundles]
 retroFit = [

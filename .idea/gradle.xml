@@ -14,10 +14,13 @@
             <option value="$PROJECT_DIR$/core/data" />
             <option value="$PROJECT_DIR$/core/database" />
             <option value="$PROJECT_DIR$/core/design" />
+            <option value="$PROJECT_DIR$/core/domain" />
             <option value="$PROJECT_DIR$/core/models" />
             <option value="$PROJECT_DIR$/core/network" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/auth" />
+            <option value="$PROJECT_DIR$/features/dashboard" />
+            <option value="$PROJECT_DIR$/features/home" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

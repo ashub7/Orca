@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -42,11 +43,9 @@ dependencies {
     api(libs.androidx.ui.graphics)
     api(libs.androidx.ui.tooling.preview)
     api(libs.google.font)
-    api(libs.coil)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
     api(platform(libs.androidx.compose.bom))
-    implementation(libs.compose.destinations)
-    ksp(libs.compose.destinations.processor)
-    implementation(libs.compose.destinations.bottomsheet)
     debugImplementation(libs.androidx.ui.tooling)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)

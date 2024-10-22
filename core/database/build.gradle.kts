@@ -42,7 +42,9 @@ android {
 dependencies {
     implementation(libs.androidx.room)
     implementation(libs.hilt.android)
+    implementation(libs.datastore.preferences)
     ksp(libs.hilt.android.compiler)
     ksp(libs.androidx.room.processor)
     testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
 }

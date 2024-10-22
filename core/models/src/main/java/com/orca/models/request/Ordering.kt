@@ -1,4 +1,4 @@
-package com.ace.blaze.data.enums
+package com.orca.models.request
 
 enum class Ordering(val type:String) {
     NAME("name"),

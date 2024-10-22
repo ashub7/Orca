@@ -1,8 +1,8 @@
 package com.orca.network.retrofit
 
+import com.orca.network.model.base.ApiFailure
 import com.orca.network.model.base.ApiResult
-import com.orca.network.model.base.Failure
-import com.orca.network.model.base.Success
+import com.orca.network.model.base.ApiSuccess
 import org.json.JSONObject
 import retrofit2.Response
 
@@ -15,19 +15,19 @@ suspend fun <T : Any> handleApi(
         val response = call()
         if (response.isSuccessful) {
             response.body()?.let {
-                return Success(it)
+                return ApiSuccess(it)
             }
         }
         response.errorBody()?.let {
             return try {
                 val errorString = it.string()
                 val errorObject = JSONObject(errorString)
-                Failure(errorObject.getString("status_message") ?: errorMessage)
+                ApiFailure(errorObject.getString("status_message") ?: errorMessage)
             } catch (ignored: Exception) {
-                Failure(ignored.message)
+                ApiFailure(ignored.message)
             }
-        } ?: return  Failure(null, response.code())
+        } ?: return  ApiFailure(null, response.code())
     } catch (e: Exception) {
-        return Failure(e.message ?: errorMessage)
+        return ApiFailure(e.message ?: errorMessage)
     }
 }

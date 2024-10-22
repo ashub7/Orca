@@ -39,4 +39,7 @@ dependencies {
     ksp(libs.hilt.android.compiler)
     implementation(libs.bundles.retroFit)
     testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.okhttp3.mockwebserver)
+    androidTestImplementation(libs.androidx.junit)
 }

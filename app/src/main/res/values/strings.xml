@@ -1,3 +1,68 @@
 <resources>
     <string name="app_name">Orca</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    <string name="english" translatable="false">English</string>
+    <string name="spanish" translatable="false">Español</string>
+    <string name="french" translatable="false">Français</string>
+    <string name="arabic" translatable="false">العربية</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="popular">Popular</string>
+    <string name="latest_releases">Latest Release</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="view_all">View All</string>
+    <string name="new_releases">New Releases</string>
+    <string name="top">Top</string>
+    <string name="top_rated_games">Top Rated Games</string>
+    <string name="popular_in_year">Popular In %s</string>
+    <string name="best_of_this_year">Best Of This Year</string>
+
+    <string name="last_30_days">Last 30 Days</string>
+    <string name="this_week">This Week</string>
+    <string name="next_week">Next Week</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="label_search">Search for any cool game</string>
+    <string name="search_error">No match found for this term</string>
+
+    <string name="released_last_30_days">Released in Last 30 Days</string>
+    <string name="released_this_week">Released This Week</string>
+    <string name="releasing_next_week">Releasing Next Week</string>
+    <string name="jumpTop">Jump to top</string>
+    <string name="developer">Developer</string>
+    <string name="publisher">Publisher</string>
+    <string name="game_series">Game Series</string>
+    <string name="game_version_bundle">Game versions and Bundles</string>
+    <string name="in_stores">Available in Stores</string>
+    <string name="genres">Genres</string>
+    <string name="website">Website</string>
+    <string name="description">Description</string>
+    <string name="see_calender">See Calender</string>
+    <string name="release_calender">Release Calender</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorites_empty">No game added in Favorites yet.</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="terms_of_use">Terms Of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="general">General</string>
+    <string name="support">Support</string>
+    <string name="legal">Legal</string>
+    <string name="powered_by_rawg">Powered by RawG</string>
+    <string name="rawg_url">https://rawg.io/</string>
+    <string name="added_favorites">%s added to Favorites</string>
+    <string name="removed_favorites">%s removed from Favorites</string>
+    <string name="raw_g">R•A•W•G</string>
+    <string name="browse_by_genre">Browse Games by Genre</string>
+    <string name="genre">Genre</string>
+    <string name="details_more">Details &amp; More</string>
+    <string name="dynamic_colors">Use Dynamic Colors</string>
+    <string name="material_you">Material you</string>
+    <string name="material_you_desc">Material You is Google\'s new unified design language it first introduced with Android 12. In contrast to rigid design paradigms of the past, it\'s a design that extracts its colors from the part of your phone that you have the most control over and that is likely very individual to you: the wallpaper.</string>
+
 </resources>
