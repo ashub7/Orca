@@ -2,11 +2,13 @@ import io.gitlab.arturbosch.detekt.Detekt
 
 plugins {
     alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.hilt.android) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.kotlin.jvm) apply false
     alias(libs.plugins.detekt)
+    alias(libs.plugins.ksp) apply false
     alias(libs.plugins.module.graph) apply true
 }
 
@@ -21,7 +23,7 @@ allprojects {
         detektPlugins(detektFormatting)
         detektPlugins("com.twitter.compose.rules:detekt:0.0.26")
     }
-    val configFile = files("$rootDir/config/detekt/detekt.yml")
+    val configFile = files("$rootDir/config/detekt/config.yml")
     detekt {
         ignoreFailures = true
         parallel = true

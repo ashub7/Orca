@@ -98,13 +98,21 @@ allprojects {
 
 
 dependencies {
-    implementation(project(":core:design"))
-    implementation(project(":features:auth"))
-    implementation(project(":features:home"))
+    implementation(projects.core.design)
+    implementation(projects.core.network)
+    implementation(projects.core.data)
+    implementation(projects.core.database)
+    implementation(projects.core.domain)
+    implementation(projects.features.auth)
+    implementation(projects.features.home)
+    implementation(projects.features.dashboard)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.core.splashScreen)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.kotlinxImmutableCollections)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 

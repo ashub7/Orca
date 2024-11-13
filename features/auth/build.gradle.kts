@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -44,6 +45,9 @@ dependencies {
     api(libs.androidx.ui.tooling.preview)
     api(libs.google.font)
     implementation(libs.hilt.android)
+    implementation(libs.kotlinxSerializationCore)
+    implementation(libs.kotlinxImmutableCollections)
+    implementation(libs.androidx.navigation.compose)
     ksp(libs.hilt.android.compiler)
     api(platform(libs.androidx.compose.bom))
     debugImplementation(libs.androidx.ui.tooling)

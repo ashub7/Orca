@@ -36,8 +36,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:design"))
-    implementation(project(":core:models"))
+    implementation(projects.core.design)
+    implementation(projects.core.domain)
+    implementation(projects.core.models)
     api(libs.androidx.activity.compose)
     api(libs.androidx.material3)
     api(libs.material)
@@ -47,6 +48,7 @@ dependencies {
     api(libs.google.font)
     implementation(libs.kotlinxImmutableCollections)
     implementation(libs.hilt.android)
+    implementation(libs.androidx.navigation.compose)
     ksp(libs.hilt.android.compiler)
     api(platform(libs.androidx.compose.bom))
     implementation(libs.pager.dotsindicator)

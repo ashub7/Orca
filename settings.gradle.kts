@@ -18,7 +18,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "Orca"
 include(":app")
 include("core:design")

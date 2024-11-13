@@ -8,14 +8,6 @@ import com.orca.domain.repository.CreatorRemoteRepository
 import com.orca.domain.repository.GameCategoryRemoteRepository
 import com.orca.domain.repository.GamePlatformRemoteRepository
 import com.orca.domain.repository.GameRemoteRepository
-import com.orca.network.datasource.CreatorRemoteDataSource
-import com.orca.network.datasource.CreatorRemoteDataSourceImpl
-import com.orca.network.datasource.GameCategoryRemoteDataSource
-import com.orca.network.datasource.GameCategoryRemoteDataSourceImpl
-import com.orca.network.datasource.GamePlatformRemoteDataSource
-import com.orca.network.datasource.GamePlatformRemoteDataSourceImpl
-import com.orca.network.datasource.GameRemoteDataSource
-import com.orca.network.datasource.GameRemoteDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

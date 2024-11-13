@@ -1,6 +1,7 @@
 package com.orca
 
 import HomeScreen
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -15,6 +16,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.orca.design.theme.OrcaTheme
+import com.orca.navigation.AppNavHost
+import com.orca.navigation.rememberAppState
+import com.orca.ui.MainApp
+import kotlinx.coroutines.runBlocking
+import java.util.Locale
 import kotlin.properties.Delegates
 
 class MainActivity : ComponentActivity() {
@@ -38,13 +44,31 @@ class MainActivity : ComponentActivity() {
                     Box(
                         modifier = Modifier.padding(innerPadding)
                     ) {
-                        HomeScreen()
+                        MainApp(appState = rememberAppState())
                     }
                 }
             }
         }
     }
+
+  /*  override fun attachBaseContext(base: Context?) {
+        //val locale = runBlocking { MantaApp.INSTANCE.dataStoreRepo.dataStore.data.first() }[DataStoreRepo.SELECTED_LOCALE]?:"en"
+        val locale = "en"
+        super.attachBaseContext(applyNewLocale(Locale(locale)))
+    }*/
+
+    private fun applyNewLocale(locale: Locale): Context {
+        val config = this.resources.configuration
+        val sysLocale = config.locales.get(0)
+        if (sysLocale.language != locale.language) {
+            Locale.setDefault(locale)
+            config.setLocale(locale)
+            resources.updateConfiguration(config, resources.displayMetrics)
+        }
+        return this
+    }
 }
+
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {

@@ -28,6 +28,7 @@ dataStore ="1.1.1"
 moduleGraph = "0.10.1"
 androidxHiltNavigationCompose = "1.2.0"
 androidxNavigation = "2.8.0"
+kotlinxSerialization = "1.6.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -51,7 +52,7 @@ androidx-compose-material3-adaptive-navigation = { group = "androidx.compose.mat
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 androidx-navigation-testing = { group = "androidx.navigation", name = "navigation-testing", version.ref = "androidxNavigation" }
-
+kotlinxSerializationCore = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm", version.ref = "kotlinxSerialization" }
 
 
 
@@ -87,6 +88,8 @@ detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
 room = {id = "androidx.room", version.ref = "roomVersion"}
 module-graph = { id = "dev.iurysouza.modulegraph", version.ref = "moduleGraph" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
 
 [bundles]
 retroFit = [

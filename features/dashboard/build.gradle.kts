@@ -34,14 +34,11 @@ android {
         jvmTarget = "1.8"
     }
 }
-ksp {
-    arg("compose-destinations.moduleName", "auth")
-    arg("compose-destinations.moduleName", "home")
-    arg("compose-destinations.mode", "destinations")
-}
 
 dependencies {
-    implementation(project(":core:database"))
+    implementation(projects.core.domain)
+    implementation(projects.features.home)
+
     api(libs.androidx.activity.compose)
     api(libs.androidx.material3)
     api(libs.material)
@@ -49,6 +46,9 @@ dependencies {
     api(libs.androidx.ui.graphics)
     api(libs.androidx.ui.tooling.preview)
     api(libs.google.font)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
+
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
     api(platform(libs.androidx.compose.bom))
